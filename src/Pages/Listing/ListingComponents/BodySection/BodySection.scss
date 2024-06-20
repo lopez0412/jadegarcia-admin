@@ -1,0 +1,881 @@
+// Font style
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500&family=Kanit:wght@200;300&family=Urbanist:wght@600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  font-family: "Urbanist", sans-serif;
+}
+// font-family: 'Dosis', sans-serif;
+// font-family: 'Kanit', sans-serif; text
+// font-family: 'Urbanist', sans-serif;
+
+// We are going to write our default code.
+// this gonna be used every where in our project.
+
+:root {
+  // All project colors
+  --primaryColor: #CE9B91;
+  --secondaryColor: #A6776B;
+  --primaryColorLight: #E4D0C9;
+  --primaryColorDark: #412214;
+  --gradientLight: #D7AE9C;
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(240, 25%, 97%);
+  --blackColor: hsl(0, 0%, 18%);
+  --blackColorLight: hsl(233, 3%, 51%);
+  --shadowColor: hsl(219, 63%, 95%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  --orangeColor: hsl(25, 84%, 53%);
+  //   linear-gradient(40deg, rgb(114, 145, 255), rgb(42, 73, 198))
+
+  //   All project font-sizes
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 10px;
+}
+
+#form1, #form2 {
+  margin-top: 10px;
+}
+
+label {
+  display: block;
+  margin: 4px 0;
+}
+
+input[type="submit"] {
+  margin-top: 4px;
+}
+
+.btn:hover {
+  background-color: #412214;
+  border-color: #412214;
+  color: #FFFFFF;
+}
+
+  .btnEditar{
+    padding: 10px;
+    width: 75px;
+    background-color: #197BBD;
+    color: #FFFFFF;
+    border-radius: 15px;
+    border: none;
+  }
+  
+  .btnBorrar{
+    padding: 14px;
+    width: 75px;
+    background-color: #A30015;
+    color: #FFFFFF;
+    border-radius: 10px;
+    border: none;
+    margin-left: 10px;
+  }
+
+  .btnBorrar:hover{
+    background-color: #5C6B73;
+    border-color: #253237;
+    color: #FFFFFF;
+  }
+
+
+
+  
+  textarea{
+    border-radius: 15px;
+    min-width: 300px;
+    min-height: 50px;
+    padding: 4px;
+    text-align: center;
+    margin-left: 4px;
+  }
+
+
+
+.BodySection {
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+  padding: 0rem 4.5rem;
+  z-index: 100;
+  transform: translateY(-9rem);
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  // Left Division of the main body ===============>
+
+  .LeftDiv {
+    flex-basis: 30%;
+    gap: 1.5rem;
+
+    .balance {
+      background: var(--whiteColor);
+      padding: 1.5rem;
+      border-radius: 15px;
+
+      .topFlex {
+        justify-content: space-between;
+        small {
+          font-family: "Kanit", sans-serif;
+          font-size: var(--h2FontSize);
+          font-weight: 400;
+          color: var(--blackColorLight);
+        }
+
+        .rightFlex {
+          gap: 0.5rem;
+          img {
+            height: 30px;
+            width: 30px;
+          }
+          .cardNumber {
+            font-family: "Kanit", sans-serif;
+          }
+        }
+      }
+
+      h1 {
+        font-family: "Kanit", sans-serif;
+        color: var(--blackColor);
+        font-size: var(--biggestFontSize);
+        padding-bottom: 1.5rem;
+      }
+
+      .buttons {
+        width: 100%;
+        justify-content: space-between;
+        gap: 1rem;
+        .btn {
+          width: 100%;
+          border-radius: 10px;
+          font-size: var(--h2FontSize);
+          gap: 0.5rem;
+          justify-content: center;
+        }
+      }
+    }
+
+    .savings {
+      background: var(--whiteColor);
+      padding: 1.5rem;
+      border-radius: 15px;
+
+      .cardTitle {
+        display: block;
+        font-family: "Kanit", sans-serif;
+        font-size: var(--h2FontSize);
+        font-weight: 400;
+        color: var(--blackColorLight);
+        margin-bottom: 1rem;
+      }
+
+      .items {
+        gap: 1rem;
+        .singleItem {
+          padding: 1rem;
+          border-radius: var(--borderRadius);
+          border: 2px solid var(--cardColor);
+          .cardTop {
+            width: 100%;
+            gap: 1rem;
+            align-items: flex-start;
+            justify-content: space-between;
+            img {
+              width: 45px;
+              background: var(--cardColor);
+              border-radius: 5px;
+              padding: 8px;
+            }
+
+            .text {
+              flex: 1;
+              h4 {
+                font-size: var(--h2FontSize);
+                color: var(--blackColor);
+              }
+              small {
+                color: var(--blackColorLight);
+                font-size: var(--normalFontSize);
+              }
+            }
+            .icon {
+              color: var(--blackColorLight);
+              font-size: 25px;
+              &:hover {
+                color: var(--blackColor);
+              }
+            }
+          }
+
+          .progress {
+            margin-top: 1rem;
+            width: 100%;
+            justify-content: space-between;
+            .color {
+              display: block;
+              height: 10px;
+              width: 100%;
+              margin-top: 0.5rem;
+              border-radius: 3rem;
+            }
+            .completed {
+              width: 40%;
+              color: var(--blackColor);
+              font-size: var(--h4FontSize);
+              font-weight: 700;
+              font-family: "Kanit", sans-serif;
+              .color {
+                background: var(--primaryColor);
+              }
+            }
+
+            .unCompleted {
+              width: 58%;
+              color: var(--blackColorLight);
+              font-size: var(--h4FontSize);
+              font-weight: 700;
+              font-family: "Kanit", sans-serif;
+              text-align: right;
+              .color {
+                background: var(--primaryColorLight);
+                opacity: 1;
+              }
+            }
+          }
+          &:nth-child(2) {
+            .completed {
+              width: 50%;
+            }
+
+            .unCompleted {
+              width: 48%;
+            }
+          }
+          &:nth-child(3) {
+            .completed {
+              width: 80%;
+            }
+
+            .unCompleted {
+              width: 18%;
+            }
+          }
+
+          &:nth-child(4) {
+            .completed {
+              width: 20%;
+            }
+
+            .unCompleted {
+              width: 78%;
+            }
+          }
+        }
+      }
+    }
+  }
+  // Right Division of the main body ===============>
+  .RightDiv {
+    flex-basis: 70%;
+    gap: 1.5rem;
+    position: relative;
+    overflow: hidden;
+
+    .firstCard {
+      border-radius: 15px;
+      background: var(--whiteColor);
+      padding: 1.5rem;
+
+      .income,
+      .expenses {
+        flex-basis: 40%;
+        padding: 1rem;
+        border-right: 2px solid var(--shadowColor);
+        padding-right: 2rem;
+        .cardTitle {
+          justify-content: space-between;
+          span {
+            color: var(--blackColorLight);
+            font-size: var(--h2FontSize);
+            font-family: "Kanit", sans-serif;
+          }
+          .icon {
+            font-size: 40px;
+            background: var(--cardColor);
+            border-radius: 5px;
+            padding: 8px;
+            color: var(--primaryColor);
+          }
+        }
+
+        h1 {
+          font-size: var(--biggestFontSize);
+          color: var(--blackColor);
+          padding: 1rem 0;
+          font-family: "Kanit", sans-serif;
+        }
+        .rate {
+          font-size: var(--h3FontSize);
+          gap: 0.4em;
+          color: var(--blackColorLight);
+          .icon,
+          blockquote {
+            color: rgb(12, 205, 12);
+          }
+        }
+      }
+
+      .firstCard_top {
+        background: var(--whiteColor);
+        align-items: flex-start;
+
+        .limit {
+          flex-basis: 60%;
+          padding: 1rem;
+          width: 100%;
+          padding-left: 2rem;
+          .cardTitle {
+            justify-content: space-between;
+            span {
+              color: var(--blackColorLight);
+              font-size: var(--h2FontSize);
+              font-family: "Kanit", sans-serif;
+            }
+            small {
+              padding: 8px 16px;
+              border-radius: 5px;
+              border: 1.5px solid var(--blackColorLight);
+              color: var(--blackColor);
+              font-size: var(--normalFontSize);
+            }
+          }
+
+          .range {
+            .amount {
+              display: block;
+              padding: 1rem 0;
+              font-size: var(--biggestFontSize);
+              color: var(--blackColor);
+              font-family: "Kanit", sans-serif;
+
+              small {
+                font-size: var(--h3FontSize);
+                margin-left: 0.5rem;
+                color: var(--blackColorLight);
+              }
+            }
+
+            .progress {
+              margin-top: 0.5rem;
+              justify-content: space-between;
+              .completed {
+                display: block;
+                height: 8px;
+                width: 20%;
+                background: var(--primaryColor);
+                border-radius: 3rem;
+              }
+              .unCompleted {
+                display: block;
+                height: 8px;
+                width: 78%;
+                background: var(--primaryColorLight);
+                border-radius: 3rem;
+                opacity: 1;
+              }
+            }
+          }
+        }
+      }
+
+      .firstCard_bottom {
+        background: var(--whiteColor);
+        align-items: flex-start;
+        .expenses {
+          flex: 40%;
+          border-top: 2px solid var(--shadowColor);
+
+          .icon {
+            color: rgb(219, 89, 89);
+          }
+          .rate {
+            font-size: var(--h3FontSize);
+            gap: 0.4em;
+            color: var(--blackColorLight);
+            .icon,
+            blockquote {
+              color: rgb(255, 0, 0);
+            }
+          }
+        }
+        .analytics {
+          flex-basis: 60%;
+          border-top: 2px solid var(--shadowColor);
+          padding: 1rem;
+          width: 100%;
+          padding-left: 2rem;
+
+          .cardTitle {
+            justify-content: space-between;
+            span {
+              color: var(--blackColorLight);
+              font-size: var(--h2FontSize);
+              font-family: "Kanit", sans-serif;
+            }
+            small {
+              padding: 8px 16px;
+              border-radius: 5px;
+              border: 1.5px solid var(--blackColorLight);
+              color: var(--blackColor);
+              font-size: var(--normalFontSize);
+            }
+          }
+
+          .ranges {
+            width: 100%;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            .color {
+              height: 8px;
+              display: block;
+              border-radius: 3rem;
+              margin-bottom: 0.5rem;
+              // background: #000;
+            }
+            .text {
+              padding-top: 0.5rem;
+              color: var(--blackColorLight);
+              font-size: var(--normalFontSize);
+              display: flex;
+              align-items: center;
+            }
+
+            .icon {
+              font-size: var(--h1FontSize);
+            }
+
+            .amount {
+              font-size: var(--h3FontSize);
+              color: var(--blackColor);
+              font-family: "Kanit", sans-serif;
+              font-weight: 700;
+            }
+
+            .Refurbrishment {
+              width: 40%;
+              .color {
+                background: #ffafca;
+              }
+              .icon {
+                color: #ffafca;
+              }
+            }
+
+            .Furniture {
+              width: 40%;
+              .color {
+                background: #9583ce;
+              }
+              .icon {
+                color: #9583ce;
+              }
+            }
+
+            .Others {
+              width: 20%;
+              .color {
+                background: #a5acfe;
+              }
+              .icon {
+                color: #a5acfe;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .secondCard {
+      background: var(--whiteColor);
+      padding: 2rem;
+      border-radius: var(--borderRadius);
+
+      .cardTitle {
+        padding-bottom: 1rem;
+        justify-content: space-between;
+        span {
+          font-size: var(--h2FontSize);
+          color: var(--blackColor);
+          font-weight: 700;
+        }
+
+        small {
+          padding: 8px 16px;
+          border-radius: 5px;
+          border: 1.5px solid var(--blackColorLight);
+          color: var(--blackColor);
+          font-size: var(--normalFontSize);
+        }
+      }
+
+      .secContainer {
+        min-height: 500px;
+        gap: 1.5rem;
+        width: 100%;
+        .singleItem {
+          justify-content: space-between;
+          padding: 1rem 0;
+          border-bottom: 2px solid var(--shadowColor);
+          gap: 1.5rem;
+          .text {
+            color: var(--blackColor);
+          }
+          .nameDiv {
+            img {
+              width: 45px;
+              background: var(--cardColor);
+              border-radius: 5px;
+              padding: 8px;
+            }
+            .text {
+              font-size: var(--h2FontSize);
+              color: var(--blackColor);
+              margin-left: 1rem;
+              small {
+                display: block;
+                padding-top: 0.1rem;
+                color: var(--blackColorLight);
+                font-size: var(--smallFontSize);
+              }
+            }
+          }
+          .dateDiv {
+            small {
+              display: block;
+              padding-top: 0.1rem;
+              color: var(--blackColorLight);
+              font-size: var(--smallFontSize);
+            }
+          }
+
+          .status {
+            background: #e7f5f0;
+            border-radius: 5px;
+            padding: 8px 16px;
+
+            .text {
+              color: rgb(37, 182, 37);
+            }
+          }
+        }
+      }
+    }
+
+    .detailsPage {
+      position: absolute;
+      background: #ffffffb6;
+      backdrop-filter: blur(55px);
+      height: 100%;
+      width: 100%;
+      border-radius: var(--borderRadius);
+      padding: 1.5rem;
+      transform: translateY(-150%);
+      .cardTitle {
+        justify-content: space-between;
+        padding-bottom: 2rem;
+        font-size: var(--h2FontSize);
+        .icon {
+          font-size: 35px;
+          background: var(--primaryColor);
+          color: var(--whiteColor);
+          border-radius: var(--borderRadius);
+          padding: 5px;
+          &:hover {
+            background: red;
+          }
+        }
+      }
+
+      .secContainer {
+        min-height: 500px;
+        gap: 1.5rem;
+        align-items: flex-start;
+        .imgsDiv {
+          flex-basis: 50%;
+          .mainImg {
+            height: 400px;
+            width: 100%;
+            border-radius: var(--borderRadius);
+          }
+
+          .smallImages {
+            margin-top: 1rem;
+            width: 100%;
+            gap: 0.5rem;
+            justify-content: center;
+            overflow: hidden;
+            img {
+              border-radius: var(--borderRadius);
+              max-width: 135px;
+              width: 100%;
+              height: 100px;
+              object-fit: cover;
+            }
+            .btnRemovePic{
+              position: absolute; /* Establece la posición absoluta para el botón */
+              background: red;
+              height: 25px;
+              width: 25px;
+              transform: translateX(-25px);
+              color: white;
+              border-radius: 10px;
+              border: none;
+              z-index: 1000; 
+            }
+          }
+        }
+
+        .agentsDiv {
+          flex-basis: 50%;
+          border: 2px solid var(--primaryColorLight);
+          padding: 1rem;
+          border-radius: var(--borderRadius);
+
+          .cardTitle {
+            color: var(--primaryColorDark);
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--shadowColor);
+          }
+          .name {
+            width: 100%;
+            justify-content: space-between;
+            font-size: var(--h1FontSize);
+            color: var(--blackColor);
+            font-weight: 700;
+            font-family: "Kanit", sans-serif;
+  
+            small {
+              font-size: var(--smallFontSize);
+              margin-left: 1rem;
+              flex: 1;
+              color: var(--blackColorLight);
+            }
+  
+            .price {
+              font-size: var(--h2FontSize);
+              background: var(--primaryColorDark);
+              padding: 8px 16px;
+              border-radius: var(--borderRadius);
+              color: var(--primaryColorLight);
+              blockquote {
+                font-size: var(--h1FontSize);
+                margin-left: 1rem;
+                color: var(--whiteColor);
+                font-family: "Kanit", sans-serif;
+                font-weight: 700;
+              }
+            }
+          }
+          .amenities {
+            padding: 1.5rem 0;
+            gap: 2rem;
+  
+            span {
+              span:nth-child(1) {
+                display: block;
+                color: var(--blackColor);
+                padding-bottom: 0.5rem;
+              }
+              span:nth-child(2) {
+                gap: 0.5rem;
+                color: var(--blackColorLight);
+              }
+            }
+          }
+          .agentInfo {
+            margin-top: 1rem;
+            align-items: flex-start;
+            gap: 1rem;
+            .top {
+              gap: 1rem;
+              .agentImage {
+                height: 70px;
+                width: 100px;
+                border-radius: var(--borderRadius);
+                overflow: hidden;
+                img {
+                  height: 100%;
+                  width: 100%;
+                  object-fit: cover;
+                }
+              }
+
+              .bio {
+                .name {
+                  font-size: var(--h2FontSize);
+                  display: block;
+                  small {
+                    display: block;
+                    font-size: var(--smallFontSize);
+                    color: var(--blackColorLight);
+                  }
+                }
+
+                .profile {
+                  width: 100%;
+                  padding: 0.7rem 0;
+                  justify-content: space-between;
+                  span:nth-child(1) {
+                    text-decoration: underline;
+                    color: var(--primaryColor);
+                    cursor: pointer;
+                  }
+                }
+              }
+            }
+
+            .bottom {
+              margin-top: 1rem;
+              p {
+                color: var(--blackColorLight);
+                font-size: var(--smallFontSize);
+                line-height: 1.5rem;
+              }
+
+              .details {
+                margin: 1rem 0;
+                gap: 1rem;
+                span {
+                  font-size: var(--normalFontSize);
+                  color: var(--blackColor);
+                  small {
+                    margin-left: 2rem;
+                    color: var(--blackColorLight);
+                  }
+                }
+              }
+
+              .contact {
+                width: 100%;
+                justify-content: space-between;
+                span:nth-child(1) {
+                  color: var(--blackColor);
+                }
+
+                div.flex {
+                  gap: 0.5rem;
+
+                  .email,
+                  .call {
+                    gap: 0.5rem;
+                    border: 2px solid var(--primaryColor);
+                    padding: 6px 12px;
+                    border-radius: var(--borderRadius);
+                    font-size: var(--normalFontSize);
+                    color: var(--primaryColor);
+                    cursor: pointer;
+                    &:hover {
+                      background: var(--primaryColor);
+                      color: var(--whiteColor);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .description {
+        margin-top: 2rem;
+        .name {
+          width: 100%;
+          justify-content: space-between;
+          font-size: var(--h1FontSize);
+          color: var(--blackColor);
+          font-weight: 700;
+          font-family: "Kanit", sans-serif;
+
+          small {
+            font-size: var(--smallFontSize);
+            margin-left: 1rem;
+            flex: 1;
+            color: var(--blackColorLight);
+          }
+
+          .price {
+            font-size: var(--h2FontSize);
+            background: var(--primaryColorDark);
+            padding: 8px 16px;
+            border-radius: var(--borderRadius);
+            color: var(--primaryColorLight);
+            blockquote {
+              font-size: var(--h1FontSize);
+              margin-left: 1rem;
+              color: var(--whiteColor);
+              font-family: "Kanit", sans-serif;
+              font-weight: 700;
+            }
+          }
+        }
+
+        .amenities {
+          padding: 1.5rem 0;
+          gap: 2rem;
+
+          span {
+            span:nth-child(1) {
+              display: block;
+              color: var(--blackColor);
+              padding-bottom: 0.5rem;
+            }
+            span:nth-child(2) {
+              gap: 0.5rem;
+              color: var(--blackColorLight);
+            }
+          }
+        }
+
+        .title {
+          display: block;
+          font-size: var(--h2FontSize);
+          padding-bottom: 1rem;
+        }
+        p {
+          color: var(--blackColorLight);
+        }
+
+        .map {
+          margin-top: 2rem;
+          width: 100%;
+          height: 260px;
+          border-radius: var(--borderRadius);
+          overflow: hidden;
+          border: 5px solid var(--shadowColor);
+          iframe {
+            border: none;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    .showDetails {
+      transition: all 0.6s ease-in-out;
+      transform: translateY(0);
+    }
+  }
+}
+
+
+

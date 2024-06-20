@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;500&family=Kanit:wght@200;300&family=Urbanist:wght@600;700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  font-family: "Urbanist", sans-serif;
+}
+
+:root {
+  --primaryColor: #CE9B91;
+  --secondaryColor: #A6776B;
+  --primaryColorLight: #E4D0C9;
+  --primaryColorDark: #412214;
+  --gradientLight: #D7AE9C;
+  --bgColor: hsl(0, 0%, 100%);
+  --formColor: hsl(20, 42%, 87%);
+  --whiteColor: hsl(240, 25%, 97%);
+  --blackColor: hsl(0, 0%, 18%);
+  --blackColorLight: hsl(233, 3%, 51%);
+  --shadowColor: hsl(219, 63%, 95%);
+  --inputColor: hsl(330, 12%, 97%);
+  --cardColor: hsl(300, 3%, 94%);
+  --orangeColor: hsl(25, 84%, 53%);
+  --biggestFontSize: 2.5rem;
+  --h1FontSize: 1.6rem;
+  --h2FontSize: 1.25rem;
+  --h3FontSize: 1rem;
+  --normalFontSize: 0.938rem;
+  --smallFontSize: 0.813rem;
+  --smallestFontSize: 0.75rem;
+  --borderRadius: 10px;
+}
+
+.BodySection {
+  width: 100%;
+  height: auto;
+  gap: 2rem;
+  padding: 0rem 4.5rem;
+  z-index: 100;
+  transform: translateY(-9rem);
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.BodySection .LeftDiv {
+  flex-basis: 30%;
+  gap: 1.5rem;
+}
+.BodySection .LeftDiv .balance {
+  background: var(--whiteColor);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+.BodySection .LeftDiv .balance .topFlex {
+  justify-content: space-between;
+}
+.BodySection .LeftDiv .balance .topFlex small {
+  font-family: "Kanit", sans-serif;
+  font-size: var(--h2FontSize);
+  font-weight: 400;
+  color: var(--blackColorLight);
+}
+.BodySection .LeftDiv .balance .topFlex .rightFlex {
+  gap: 0.5rem;
+}
+.BodySection .LeftDiv .balance .topFlex .rightFlex img {
+  height: 30px;
+  width: 30px;
+}
+.BodySection .LeftDiv .balance .topFlex .rightFlex .cardNumber {
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .LeftDiv .balance h1 {
+  font-family: "Kanit", sans-serif;
+  color: var(--blackColor);
+  font-size: var(--biggestFontSize);
+  padding-bottom: 1.5rem;
+}
+.BodySection .LeftDiv .balance .buttons {
+  width: 100%;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.BodySection .LeftDiv .balance .buttons .btn {
+  width: 100%;
+  border-radius: 10px;
+  font-size: var(--h2FontSize);
+  gap: 0.5rem;
+  justify-content: center;
+}
+.BodySection .LeftDiv .savings {
+  background: var(--whiteColor);
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+.BodySection .LeftDiv .savings .cardTitle {
+  display: block;
+  font-family: "Kanit", sans-serif;
+  font-size: var(--h2FontSize);
+  font-weight: 400;
+  color: var(--blackColorLight);
+  margin-bottom: 1rem;
+}
+.BodySection .LeftDiv .savings .items {
+  gap: 1rem;
+}
+.BodySection .LeftDiv .savings .items .singleItem {
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  border: 2px solid var(--cardColor);
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop {
+  width: 100%;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop img {
+  width: 45px;
+  background: var(--cardColor);
+  border-radius: 5px;
+  padding: 8px;
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop .text {
+  flex: 1;
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop .text h4 {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop .text small {
+  color: var(--blackColorLight);
+  font-size: var(--normalFontSize);
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop .icon {
+  color: var(--blackColorLight);
+  font-size: 25px;
+}
+.BodySection .LeftDiv .savings .items .singleItem .cardTop .icon:hover {
+  color: var(--blackColor);
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress {
+  margin-top: 1rem;
+  width: 100%;
+  justify-content: space-between;
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress .color {
+  display: block;
+  height: 10px;
+  width: 100%;
+  margin-top: 0.5rem;
+  border-radius: 3rem;
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress .completed {
+  width: 40%;
+  color: var(--blackColor);
+  font-size: var(--h4FontSize);
+  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress .completed .color {
+  background: var(--primaryColor);
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress .unCompleted {
+  width: 58%;
+  color: var(--blackColorLight);
+  font-size: var(--h4FontSize);
+  font-weight: 700;
+  font-family: "Kanit", sans-serif;
+  text-align: right;
+}
+.BodySection .LeftDiv .savings .items .singleItem .progress .unCompleted .color {
+  background: var(--primaryColorLight);
+  opacity: 1;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(2) .completed {
+  width: 50%;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(2) .unCompleted {
+  width: 48%;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(3) .completed {
+  width: 80%;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(3) .unCompleted {
+  width: 18%;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(4) .completed {
+  width: 20%;
+}
+.BodySection .LeftDiv .savings .items .singleItem:nth-child(4) .unCompleted {
+  width: 78%;
+}
+.BodySection .LeftDiv .savings .items .singleItem .actions {
+  display: grid;
+  transition: all 0.4s ease-in-out;
+  transform: translateX(150%);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  padding: 1rem;
+  background: rgba(179, 200, 237, 0.279);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  height: 100%;
+  gap: 0.25rem;
+  border-radius: 5px;
+}
+.BodySection .LeftDiv .savings .items .singleItem .actions .flex {
+  padding: 0.25rem;
+  width: 100%;
+  background: #a4c4e9;
+  border-radius: 5px;
+  color: var(--whiteColor);
+  gap: 0.5rem;
+  margin: auto;
+  justify-content: center;
+  cursor: pointer;
+}
+.BodySection .LeftDiv .savings .items .singleItem .actions .flex:hover {
+  transition: all 0.4s ease-in-out;
+  background: #7d98b7;
+}
+.BodySection .LeftDiv .savings .items .singleItem .actions .delete {
+  background: red;
+}
+.BodySection .LeftDiv .savings .items .singleItem .actions .closeIcon {
+  position: absolute;
+  left: -18px;
+  top: 0%;
+  font-size: 30px;
+  background: red;
+  border-radius: 50%;
+  padding: 5px;
+  color: var(--whiteColor);
+}
+.BodySection .LeftDiv .savings .items .singleItem .showActions {
+  transform: translateX(0%);
+}
+.BodySection .RightDiv {
+  flex-basis: 70%;
+  gap: 1.5rem;
+}
+.BodySection .RightDiv .firstCard {
+  border-radius: 15px;
+  padding: 1.5rem;
+  background: var(--whiteColor);
+}
+.BodySection .RightDiv .firstCard .income,
+.BodySection .RightDiv .firstCard .expenses {
+  flex-basis: 40%;
+  padding: 1rem;
+  border-right: 2px solid var(--shadowColor);
+  padding-right: 2rem;
+}
+.BodySection .RightDiv .firstCard .income .cardTitle,
+.BodySection .RightDiv .firstCard .expenses .cardTitle {
+  justify-content: space-between;
+}
+.BodySection .RightDiv .firstCard .income .cardTitle span,
+.BodySection .RightDiv .firstCard .expenses .cardTitle span {
+  color: var(--blackColorLight);
+  font-size: var(--h2FontSize);
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .firstCard .income .cardTitle .icon,
+.BodySection .RightDiv .firstCard .expenses .cardTitle .icon {
+  font-size: 40px;
+  background: var(--cardColor);
+  border-radius: 5px;
+  padding: 8px;
+  color: var(--primaryColor);
+}
+.BodySection .RightDiv .firstCard .income h1,
+.BodySection .RightDiv .firstCard .expenses h1 {
+  font-size: var(--biggestFontSize);
+  color: var(--blackColor);
+  padding: 1rem 0;
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .firstCard .income .rate,
+.BodySection .RightDiv .firstCard .expenses .rate {
+  font-size: var(--h3FontSize);
+  gap: 0.4em;
+  color: var(--blackColorLight);
+}
+.BodySection .RightDiv .firstCard .income .rate .icon,
+.BodySection .RightDiv .firstCard .income .rate blockquote,
+.BodySection .RightDiv .firstCard .expenses .rate .icon,
+.BodySection .RightDiv .firstCard .expenses .rate blockquote {
+  color: rgb(12, 205, 12);
+}
+.BodySection .RightDiv .firstCard .firstCard_top {
+  background: var(--whiteColor);
+  align-items: flex-start;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit {
+  flex-basis: 60%;
+  padding: 1rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle {
+  justify-content: space-between;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle span {
+  color: var(--blackColorLight);
+  font-size: var(--h2FontSize);
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle small {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1.5px solid var(--blackColorLight);
+  color: var(--blackColor);
+  font-size: var(--normalFontSize);
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .range .amount {
+  display: block;
+  padding: 1rem 0;
+  font-size: var(--biggestFontSize);
+  color: var(--blackColor);
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .range .amount small {
+  font-size: var(--h3FontSize);
+  margin-left: 0.5rem;
+  color: var(--blackColorLight);
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress {
+  margin-top: 0.5rem;
+  justify-content: space-between;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress .completed {
+  display: block;
+  height: 8px;
+  width: 20%;
+  background: var(--primaryColor);
+  border-radius: 3rem;
+}
+.BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress .unCompleted {
+  display: block;
+  height: 8px;
+  width: 78%;
+  background: var(--primaryColorLight);
+  border-radius: 3rem;
+  opacity: 1;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom {
+  background: var(--whiteColor);
+  align-items: flex-start;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .expenses {
+  flex: 40%;
+  border-top: 2px solid var(--shadowColor);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .expenses .icon {
+  color: rgb(219, 89, 89);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate {
+  font-size: var(--h3FontSize);
+  gap: 0.4em;
+  color: var(--blackColorLight);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate .icon,
+.BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate blockquote {
+  color: rgb(255, 0, 0);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics {
+  flex-basis: 60%;
+  border-top: 2px solid var(--shadowColor);
+  padding: 1rem;
+  width: 100%;
+  padding-left: 2rem;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle {
+  justify-content: space-between;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle span {
+  color: var(--blackColorLight);
+  font-size: var(--h2FontSize);
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle small {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1.5px solid var(--blackColorLight);
+  color: var(--blackColor);
+  font-size: var(--normalFontSize);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges {
+  width: 100%;
+  gap: 0.5rem;
+  margin-top: 2rem;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .color {
+  height: 8px;
+  display: block;
+  border-radius: 3rem;
+  margin-bottom: 0.5rem;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .text {
+  padding-top: 0.5rem;
+  color: var(--blackColorLight);
+  font-size: var(--normalFontSize);
+  display: flex;
+  align-items: center;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .icon {
+  font-size: var(--h1FontSize);
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .amount {
+  font-size: var(--h3FontSize);
+  color: var(--blackColor);
+  font-family: "Kanit", sans-serif;
+  font-weight: 700;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment {
+  width: 40%;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment .color {
+  background: #ffafca;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment .icon {
+  color: #ffafca;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture {
+  width: 40%;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture .color {
+  background: #9583ce;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture .icon {
+  color: #9583ce;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others {
+  width: 20%;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others .color {
+  background: #a5acfe;
+}
+.BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others .icon {
+  color: #a5acfe;
+}
+.BodySection .RightDiv .secondCard {
+  background: var(--whiteColor);
+  padding: 2rem;
+  border-radius: var(--borderRadius);
+}
+.BodySection .RightDiv .secondCard .cardTitle {
+  padding-bottom: 1rem;
+  justify-content: space-between;
+}
+.BodySection .RightDiv .secondCard .cardTitle span {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+  font-weight: 700;
+}
+.BodySection .RightDiv .secondCard .cardTitle small {
+  padding: 8px 16px;
+  border-radius: 5px;
+  border: 1.5px solid var(--blackColorLight);
+  color: var(--blackColor);
+  font-size: var(--normalFontSize);
+}
+.BodySection .RightDiv .secondCard .secContainer {
+  min-height: 500px;
+  gap: 1.5rem;
+  width: 100%;
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem {
+  justify-content: space-between;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--shadowColor);
+  gap: 1.5rem;
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .text {
+  color: var(--blackColor);
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv img {
+  width: 45px;
+  background: var(--cardColor);
+  border-radius: 5px;
+  padding: 8px;
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv .text {
+  font-size: var(--h2FontSize);
+  color: var(--blackColor);
+  margin-left: 1rem;
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv .text small {
+  display: block;
+  padding-top: 0.1rem;
+  color: var(--blackColorLight);
+  font-size: var(--smallFontSize);
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .dateDiv small {
+  display: block;
+  padding-top: 0.1rem;
+  color: var(--blackColorLight);
+  font-size: var(--smallFontSize);
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .status {
+  background: #e7f5f0;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+.BodySection .RightDiv .secondCard .secContainer .singleItem .status .text {
+  color: rgb(37, 182, 37);
+}
+.BodySection .RightDiv .listingContainer {
+  padding: 1.5rem;
+  border-radius: var(--borderRadius);
+  background: var(--whiteColor);
+}
+.BodySection .RightDiv .listingContainer .cardTitle {
+  display: block;
+  font-size: var(--h1FontSize);
+  color: var(--blackColorLight);
+  font-weight: 700;
+}
+.BodySection .RightDiv .listingContainer .searchField {
+  margin: 2rem 0;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  border-radius: var(--borderRadius);
+  border: 5px solid var(--cardColor);
+  box-shadow: 0 4px 8px var(--primaryColorLight);
+}
+.BodySection .RightDiv .listingContainer .searchField .select {
+  display: grid;
+  gap: 0.5rem;
+  width: 100%;
+}
+.BodySection .RightDiv .listingContainer .searchField .select small {
+  color: var(--primaryColorDark);
+  opacity: 0.7;
+  font-size: var(--smallestFontSize);
+  font-weight: 200;
+}
+.BodySection .RightDiv .listingContainer .searchField .select select {
+  border: none;
+  width: 70%;
+  background: var(--cardColor);
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  color: var(--primaryColorDark);
+}
+.BodySection .RightDiv .listingContainer .searchField .btn {
+  padding: 10px 30px;
+  font-size: var(--h2FontSize);
+  gap: 0.5rem;
+}
+.BodySection .RightDiv .listingContainer .secContainer {
+  min-height: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty {
+  padding: 1rem;
+  border-radius: var(--borderRadius);
+  background: var(--shadowColor);
+  border: 2px dashed transparent;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty:hover {
+  box-shadow: 0 4px 8px var(--primaryColorLight);
+  border: 2px dashed var(--primaryColorDark);
+  transition: 0.4s ease-in-out;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text h4 {
+  font-size: var(--h1FontSize);
+  color: var(--primaryColorDark);
+  padding-bottom: 0.5rem;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text span {
+  color: var(--blackColorLight);
+  font-size: var(--h2FontSize);
+  display: block;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text small {
+  display: block;
+  font-size: var(--normalFontSize);
+  color: var(--blackColorLight);
+  padding: 0.5rem 0;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .icon {
+  font-size: var(--h1FontSize);
+  color: rgb(226, 128, 159);
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature {
+  margin: 0.5rem 0;
+  position: relative;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature .title {
+  display: block;
+  color: var(--blackColor);
+  font-size: var(--h3FontSize);
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature h4 {
+  font-size: var(--h1FontSize);
+  font-family: "Kanit", sans-serif;
+  color: var(--primaryColorDark);
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature h4 .icon {
+  color: rgb(255, 200, 0);
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv {
+  height: 180px;
+  width: 100%;
+  border-radius: var(--borderRadius);
+  overflow: hidden;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv:hover img {
+  scale: 1.1;
+  transition: all 0.5s ease-in-out;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv img {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .price {
+  padding-top: 1rem;
+  justify-content: space-between;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .price span {
+  font: var(--h3FontSize);
+  color: var(--blackColorLight);
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .price span h4 {
+  color: var(--primaryColorDark);
+  font-size: var(--h1FontSize);
+  font-family: "Kanit", sans-serif;
+}
+.BodySection .RightDiv .listingContainer .secContainer .singleProperty .price .btn {
+  padding: 12px 25px;
+  font-size: var(--h3FontSize);
+}/*# sourceMappingURL=BodySection.css.map */
