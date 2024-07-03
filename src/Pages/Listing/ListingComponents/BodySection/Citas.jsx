@@ -204,7 +204,7 @@ const getAppoinments = async () => {
   }
 
   const filtraUser = (text) => {
-    axios.get(baseUrl + '/search', { params: { nombre: text, telefono: text } })
+    axios.get(baseUrl + '/search', { params: { nombre: text} })
         .then((response) => {
           procesaServicios(response.data)
         })
