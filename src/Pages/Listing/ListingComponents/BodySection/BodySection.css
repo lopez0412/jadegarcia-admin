@@ -33,6 +33,36 @@
   --borderRadius: 10px;
 }
 
+@media (max-width: 1024px) {
+  .BodySection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 4.5rem;
+    z-index: 100;
+    transform: translateY(-1rem);
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  .BodySection .LeftDiv {
+    display: flex;
+    flex-direction: row;
+  }
+  .BodySection .LeftDiv .balance {
+    display: none;
+  }
+  .BodySection .LeftDiv .savings .items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .BodySection .RightDiv {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+}
 #form1, #form2 {
   margin-top: 10px;
 }
@@ -474,7 +504,7 @@ textarea {
   font-size: var(--normalFontSize);
 }
 .BodySection .RightDiv .secondCard .secContainer {
-  min-height: 500px;
+  min-height: 800px;
   gap: 1.5rem;
   width: 100%;
 }
@@ -545,7 +575,7 @@ textarea {
   background: red;
 }
 .BodySection .RightDiv .detailsPage .secContainer {
-  min-height: 500px;
+  min-height: 800px;
   gap: 1.5rem;
   align-items: flex-start;
 }

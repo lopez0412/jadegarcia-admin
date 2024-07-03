@@ -43,6 +43,42 @@
   --smallestFontSize: 0.75rem;
   --borderRadius: 10px;
 }
+@media (max-width: 1024px) { // Typical tablet breakpoint
+  .BodySection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 4.5rem;
+    z-index: 100;
+    transform: translateY(-1rem);
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    .LeftDiv {
+      display: flex; // Display LeftDiv horizontally on small screens
+      flex-direction: row; // Align content horizontally
+      .balance{
+        display: none;
+      }
+      .savings {
+        .items{
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+
+    .RightDiv {
+      width: 100%; // Full width for RightDiv on small screens
+      position: relative;
+      overflow: hidden;
+    }
+  }
+
+}
+
 
 #form1, #form2 {
   margin-top: 10px;
@@ -529,7 +565,7 @@ input[type="submit"] {
       }
 
       .secContainer {
-        min-height: 500px;
+        min-height: 800px;
         gap: 1.5rem;
         width: 100%;
         .singleItem {
@@ -607,7 +643,7 @@ input[type="submit"] {
       }
 
       .secContainer {
-        min-height: 500px;
+        min-height: 800px;
         gap: 1.5rem;
         align-items: flex-start;
         .imgsDiv {
