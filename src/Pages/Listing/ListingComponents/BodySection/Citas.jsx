@@ -203,6 +203,16 @@ const getAppoinments = async () => {
         });
   }
 
+  const filtraUser = (text) => {
+    axios.get(baseUrl + '/search', { params: { nombre: text, telefono: text } })
+        .then((response) => {
+          procesaServicios(response.data)
+        })
+        .catch((error) => {
+          console.error('Error fetching suggestions:', error);
+        });
+  }
+
   const procesaServicios = (array) =>{
     const options = []
     array.map((data) => {
@@ -216,6 +226,11 @@ const getAppoinments = async () => {
       setServiceId(selectedOption.value)
       getDisponibilidad(selectedOption.value, selectedDate)
   };
+
+  const handleChangeUser = (selected) => {
+    console.log(selected)
+    setUserId(selected.value)
+  }
 
   const GuardarCita = async() =>{
     if(newDate == '' || !newAppoinment.nombre || !newAppoinment.birthDate || !newAppoinment.telefono || !newAppoinment.enfoque ){
@@ -310,7 +325,7 @@ const getAppoinments = async () => {
             step={30}
             startAccessor="start"
             endAccessor="end"
-            style={{ height: "100%", width: "100%", minHeight: "90vh" }}
+            style={{ height: "750px", width: "100%", minHeight: "90vh" }}
             onSelectEvent={(event) => showDetails(event)}
             onSelectSlot={handleSelect}
             eventPropGetter={(myEventsList) => {
@@ -463,6 +478,10 @@ const getAppoinments = async () => {
             <div className="agentInfo">
               <div className="bottom">
                 <div className="details grid">
+                  <div> 
+                    <Select options={suggestions} onChange={handleChangeSelect}/>
+                  </div>
+
                   <div> 
                     <Select options={suggestions} onChange={handleChangeSelect}/>
                   </div>
