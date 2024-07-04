@@ -2,7 +2,9 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   font-family: "Urbanist", sans-serif;
 }
@@ -43,21 +45,29 @@
   padding: 2rem 4.5rem;
   border-radius: 0 0 1rem 1rem;
 }
+
 .HelloSection .navBar {
   width: 100%;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .HelloSection .navBar .menuDiv {
   gap: 5rem;
 }
+
 .HelloSection .navBar .menuDiv .logoDiv img {
   max-width: 80px;
   height: auto;
 }
+
 .HelloSection .navBar .menuDiv .menu {
   gap: 2rem;
-  flex-basis: 1;
+  -ms-flex-preferred-size: 1;
+      flex-basis: 1;
 }
+
 .HelloSection .navBar .menuDiv .menu .menuList {
   font-size: var(--normalFontSize);
   font-size: 200;
@@ -65,81 +75,113 @@
   padding: 8px 25px;
   border-radius: 3rem;
 }
+
 .HelloSection .navBar .menuDiv .menu .menuList a {
   color: var(--whiteColor);
   opacity: 0.6;
 }
+
 .HelloSection .navBar .menuDiv .menu .menuList:hover {
+  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: linear-gradient(40deg, var(--primaryColorDark), var(--primaryColor));
 }
+
 .HelloSection .navBar .menuDiv .menu .menuList:hover a {
   opacity: 1;
 }
+
 .HelloSection .navBar .menuDiv .menu .active {
   background: linear-gradient(40deg, var(--primaryColorDark), var(--primaryColor));
 }
+
 .HelloSection .navBar .menuDiv .menu .active a {
   opacity: 1;
 }
+
 .HelloSection .navBar .account {
   gap: 1rem;
 }
+
 .HelloSection .navBar .account .icon {
   color: var(--whiteColor);
   font-size: 24px;
 }
+
 .HelloSection .navBar .account .searchBar {
-  background: rgb(50, 61, 87);
+  background: #323d57;
   padding: 8px 20px;
   border-radius: 3rem;
   gap: 0.5rem;
 }
+
 .HelloSection .navBar .account .searchBar input {
   background: none;
   outline: none;
   border: none;
   color: var(--whiteColor);
 }
-.HelloSection .navBar .account .searchBar input::-moz-placeholder {
+
+.HelloSection .navBar .account .searchBar input::-webkit-input-placeholder {
   font-weight: 200;
   color: var(--whiteColor);
   opacity: 0.3;
   font-family: "Kanit", sans-serif;
 }
+
+.HelloSection .navBar .account .searchBar input:-ms-input-placeholder {
+  font-weight: 200;
+  color: var(--whiteColor);
+  opacity: 0.3;
+  font-family: "Kanit", sans-serif;
+}
+
+.HelloSection .navBar .account .searchBar input::-ms-input-placeholder {
+  font-weight: 200;
+  color: var(--whiteColor);
+  opacity: 0.3;
+  font-family: "Kanit", sans-serif;
+}
+
 .HelloSection .navBar .account .searchBar input::placeholder {
   font-weight: 200;
   color: var(--whiteColor);
   opacity: 0.3;
   font-family: "Kanit", sans-serif;
 }
+
 .HelloSection .navBar .account .notificationsIcon {
   font-size: 40px;
-  background: rgb(50, 61, 87);
+  background: #323d57;
   padding: 10px;
   border-radius: 50%;
 }
+
 .HelloSection .navBar .account img {
   height: 40px;
   width: 40px;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 50%;
-  border: 5px solid rgb(50, 61, 87);
+  border: 5px solid #323d57;
 }
+
 .HelloSection .InHello {
   margin-top: 3rem;
 }
+
 .HelloSection .InHello .title {
   color: var(--whiteColor);
   font-size: var(--biggestFontSize);
   font-family: "Kanit", sans-serif;
 }
+
 .HelloSection .InHello .subMenu {
   gap: 1.5rem;
   width: 50%;
-  border-bottom: 1.5px solid rgb(131, 133, 138);
+  border-bottom: 1.5px solid #83858a;
 }
+
 .HelloSection .InHello .subMenu li {
   padding: 1rem;
   color: var(--whiteColor);
@@ -147,11 +189,14 @@
   border-bottom: 2px solid transparent;
   cursor: pointer;
 }
+
 .HelloSection .InHello .subMenu li:hover {
   border-bottom: 2px solid var(--whiteColor);
   opacity: 1;
 }
+
 .HelloSection .InHello .subMenu .active {
   border-bottom: 2px solid var(--whiteColor);
   opacity: 1;
-}/*# sourceMappingURL=HelloSection.css.map */
+}
+/*# sourceMappingURL=HelloSection.css.map */

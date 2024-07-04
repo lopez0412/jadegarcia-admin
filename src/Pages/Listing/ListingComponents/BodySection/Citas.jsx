@@ -41,9 +41,11 @@ function Citas() {
   const [selectedDate, setSelectedDate] = useState('');
   const [newAppoinment, setNewAppointment] = useState({})
   const [suggestions, setSuggestions] = useState([]);
+  const [userSuggestions, setUserSuggestions] = useState([]);
   const [newDate, setNewDate] = useState('')
   const [serviceId, setServiceId] = useState('')
   const [newNote, setNewNote] = useState('')
+  const [userId, setUserId] = useState('')
 
   const navigate = useNavigate();
 
@@ -206,7 +208,7 @@ const getAppoinments = async () => {
   const filtraUser = (text) => {
     axios.get(baseUrl + '/search', { params: { nombre: text} })
         .then((response) => {
-          procesaServicios(response.data)
+          procesaUsuario(response.data)
         })
         .catch((error) => {
           console.error('Error fetching suggestions:', error);
@@ -221,6 +223,14 @@ const getAppoinments = async () => {
     setSuggestions(options)
   }
 
+  const procesaUsuario = (array) =>{
+    const options = []
+    array.map((data) => {
+      options.push({value: data._id, label: data.nombre})
+    })
+    setUserSuggestions(options)
+  }
+
   const handleChangeSelect = (selectedOption) => {
       console.log(`Option selected:`, selectedOption)
       setServiceId(selectedOption.value)
@@ -233,6 +243,52 @@ const getAppoinments = async () => {
   }
 
   const GuardarCita = async() =>{
+    if (userId != ''){
+      if(newDate == '' || !newAppoinment.telefono){
+        show_alerta("Completa los campos", "warning")
+        return
+        }
+
+         
+      var metodo = 'POST'
+      var urlStr = baseUrl + '/postCitaUser'
+      var header ={'Content-Type': 'application/json','auth-token': token}
+
+      var parametros = {
+        servicioId: serviceId,
+        userId: userId,
+        telefono: newAppoinment.telefono,
+        citaDate: newDate.split('T')[0],
+        hora: newDate.split('T')[1].split('.')[0]
+      }
+
+      await axios({method: metodo, url: urlStr,headers: header, data: parametros})
+      .then(function(respuesta){
+          console.log(respuesta)
+          var type = respuesta.data.tipo
+          var message = respuesta.data.mensaje
+          show_alerta(message,type)
+          if (type === 'success'){
+              removeDetails();
+              getAppoinments();
+              setLoading(false)
+          }
+      })
+      .catch(function(error){
+          console.log(error)
+          setLoading(false)
+          if(error.response.status === 401){
+              removeDetails();
+              show_alerta('Sesion terminada','error')
+              logOut()
+          }else{
+          removeDetails();
+          show_alerta("Error en la solicitud",'error')
+          console.log(error)
+          }
+      })
+
+    }else{
     if(newDate == '' || !newAppoinment.nombre || !newAppoinment.birthDate || !newAppoinment.telefono || !newAppoinment.enfoque ){
       show_alerta("Completa los campos", "warning")
       return
@@ -277,6 +333,7 @@ const getAppoinments = async () => {
           console.log(error)
           }
       })
+    }
   }
 
   const handleShowNotes = () =>{
@@ -325,7 +382,7 @@ const getAppoinments = async () => {
             step={30}
             startAccessor="start"
             endAccessor="end"
-            style={{ height: "750px", width: "100%", minHeight: "90vh" }}
+            style={{ height: "850px", width: "100%", minHeight: "90vh" }}
             onSelectEvent={(event) => showDetails(event)}
             onSelectSlot={handleSelect}
             eventPropGetter={(myEventsList) => {
@@ -483,7 +540,7 @@ const getAppoinments = async () => {
                   </div>
 
                   <div> 
-                    <Select options={suggestions} onChange={handleChangeSelect}/>
+                    <Select options={userSuggestions} onInputChange={(e) => filtraUser(e)} onChange={handleChangeUser}/>
                   </div>
                   <div className='product-available'>
                             {horarios.map((hora, index) => (
@@ -493,16 +550,24 @@ const getAppoinments = async () => {
                                 </div>
                             ))}
                         </div>
-                  <div> Nombre: <input id='nombre' name='nombre' onChange={(e) => handleChange(e)}/></div>
-                  <div>
-                    Fecha de Nacimiento:  <input type='date'  id='birthDate' name='birthDate' value={newAppoinment.birthDate} onChange={(e) => handleChange(e)} defaultValue="1990-01-01" required/>
-                  </div>
-                  <div>
-                    Telefono:  <input id='telefono' name='telefono'  onChange={(e) => handleChange(e)}/>
-                  </div>
-                  <div>
-                    Enfoque: <textarea id='enfoque' name='enfoque'  onChange={(e) => handleChange(e)}/>
-                  </div>
+                  {userId != '' ? ( <div>
+                        Telefono:  <input id='telefono' name='telefono'  onChange={(e) => handleChange(e)}/>
+                      </div>) : (
+                    <div className="details grid">
+                       <div> Nombre: <input id='nombre' name='nombre' onChange={(e) => handleChange(e)}/></div>
+                      <div>
+                        Fecha de Nacimiento:  <input type='date'  id='birthDate' name='birthDate' value={newAppoinment.birthDate} onChange={(e) => handleChange(e)} defaultValue="1990-01-01" required/>
+                      </div>
+                      <div>
+                        Telefono:  <input id='telefono' name='telefono'  onChange={(e) => handleChange(e)}/>
+                      </div>
+                      <div>
+                        Enfoque: <textarea id='enfoque' name='enfoque'  onChange={(e) => handleChange(e)}/>
+                      </div>
+                    </div>
+                  )}
+                 
+                
                  
                   <div><button className='btn btn-sm' name='save' onClick={GuardarCita} >Guardar</button></div>
                 </div>
