@@ -7,16 +7,11 @@ import "./BodySection.css";
 import { useNavigate } from 'react-router-dom';
 
 // Impored Images
-import masterCard from "../../../../Assets/masterCard.png";
-import Ring from "../../../../Assets/wedding-ring.png";
-import House from "../../../../Assets/house.png";
-import Travel from "../../../../Assets/business-trip.png";
-import PS from "../../../../Assets/playstation.png";
+import SalesWoman from "../../../../Assets/saleswoman.png";
+import Gross from "../../../../Assets/gross.png"
 
-// Impored Images
-import { GiReceiveMoney } from "react-icons/gi";
-import { GiPayMoney } from "react-icons/gi";
-import { PiDotsThreeOutlineBold } from "react-icons/pi";
+
+
 
 const LeftDiv = () => {
 
@@ -24,6 +19,9 @@ const LeftDiv = () => {
   const token = localStorage.getItem('token')
   const baseUrl ='http://localhost:3000/api'
   const [datos, setDatos] = useState({})
+  const [datosEstilista, setDatosEstilista] = useState([])
+  const [maxVendedora, setMaxVendedora] = useState({})
+  const [totalDia, setTotalDia] = useState({})
   const [decoded, setDecoded] = useState('')
 
   const navigate = useNavigate();
@@ -40,6 +38,7 @@ const LeftDiv = () => {
     if(token){
         setDecoded(jwtDecode(token));
         getTotal()
+       
     }else{
         navegarLogin();
     }
@@ -47,12 +46,13 @@ const LeftDiv = () => {
 
 //metodo que regresa al login si aun no te has logueado.
 function navegarLogin(){
-  navigate('/login')
+  navigate('/')
 }
 
 //MARK: - Metodo para traer la lista de los trips..
 const getTotal = async () => {
-  await axios.get(baseUrl+'/total-mes/6', {
+  const currentMonth = new Date().getMonth() + 1;
+  await axios.get(`${baseUrl}/total-mes-dia/${currentMonth}`, {
       headers: {
           'Content-Type': 'application/json',
           'auth-token': token
@@ -61,6 +61,31 @@ const getTotal = async () => {
   .then(res => {
     //console.log(res.data)
      setDatos(res.data);
+     getmaxVendor()
+    })
+    .catch(error => {
+      if(error.response.status === 400){
+          show_alerta('Sesion terminada','error')
+          logOut()
+      }else{
+      show_alerta("Error en la solicitud",'error')
+      console.log(error)
+      }
+  })
+  
+}
+
+
+const getmaxVendor = async () => {
+  await axios.get(baseUrl+'/maxima-vendedora', {
+      headers: {
+          'Content-Type': 'application/json',
+          'auth-token': token
+      }
+  })
+  .then(res => {
+    //console.log(res.data)
+     setMaxVendedora(res.data);
     })
     .catch(error => {
       if(error.response.status === 400){
@@ -81,83 +106,49 @@ const getTotal = async () => {
         <span className="topFlex flex">
           <small>Ventas del Mes - Citas</small>
         </span>
-        <h1>${datos.total}</h1>
+        <h1>${datos.totalMes}</h1>
       </div>
 
       <div className="savings">
-        <span className="cardTitle">Savings Plan</span>
+        <span className="cardTitle">Reportes</span>
         <div className="items grid">
          
 
           <div className="singleItem">
             <span className="cardTop flex">
-              <img src={Ring} alt="Car Icon" />
+              <img src={SalesWoman} alt="Car Icon" />
               <span className="text">
-                <h4>Wedding Function</h4>
-                <small>Monthly Savings: $1500</small>
+                <h4>Maxima Vendedora</h4>
+                <small>Numero de Citas: {maxVendedora.totalCitas} </small>
               </span>
-              <span>
-                <PiDotsThreeOutlineBold className="icon" />
-              </span>
+              
             </span>
             <div className="progress flex">
+              {/*maxVendedora._id.nombre*/}
               <span className="completed">
-                $50,000
-                <span className="color"></span>
+              ${maxVendedora.totalDinero}
               </span>
-              <span className="unCompleted">
-                $250,000
-                <span className="color"></span>
-              </span>
-            </div>
-          </div>
-          <div className="singleItem">
-            <span className="cardTop flex">
-              <img src={House} alt="Car Icon" />
-              <span className="text">
-                <h4>New Home</h4>
-                <small>Monthly Savings: $1500</small>
-              </span>
-              <span>
-                <PiDotsThreeOutlineBold className="icon" />
-              </span>
-            </span>
-            <div className="progress flex">
-              <span className="completed">
-                $40,000
-                <span className="color"></span>
-              </span>
-              <span className="unCompleted">
-                $50,000
-                <span className="color"></span>
-              </span>
+             
             </div>
           </div>
 
           <div className="singleItem">
             <span className="cardTop flex">
-              <img src={Travel} alt="Car Icon" />
+              <img src={Gross} alt="Car Icon" />
               <span className="text">
-                <h4>Family Trip</h4>
-                <small>Monthly Savings: $500</small>
+                <h4>Total Dia:</h4>
               </span>
-              <span>
-                <PiDotsThreeOutlineBold className="icon" />
-              </span>
+              
             </span>
             <div className="progress flex">
+              ${datos.totalDia}
               <span className="completed">
-                $5,000
-                <span className="color"></span>
+              
               </span>
-              <span className="unCompleted">
-                $10,000
-                <span className="color"></span>
-              </span>
+             
             </div>
           </div>
-
-          <div className="singleItem">
+          {/*<div className="singleItem">
             <span className="cardTop flex">
               <img src={PS} alt="Car Icon" />
               <span className="text">
@@ -179,6 +170,7 @@ const getTotal = async () => {
               </span>
             </div>
           </div>
+          */}
         </div>
       </div>
     </div>

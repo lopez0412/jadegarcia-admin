@@ -2,9 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.3s ease;
+  box-sizing: border-box;
   transition: 0.3s ease;
   font-family: "Urbanist", sans-serif;
 }
@@ -35,38 +33,22 @@
 }
 
 .flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .body {
   overflow-x: hidden;
   background: var(--bgColor);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   margin: auto;
 }
 
@@ -98,7 +80,6 @@ li {
 .icons {
   gap: 0.5rem;
 }
-
 .icons .icon {
   height: 35px;
   width: 35px;
@@ -108,7 +89,6 @@ li {
   padding: 2px;
   border: 2px solid transparent;
 }
-
 .icons .icon:hover {
   border: 2px solid var(--shadowColor);
 }
@@ -145,9 +125,7 @@ img {
   font-weight: 500;
   background: linear-gradient(40deg, var(--primaryColor), var(--primaryColor));
 }
-
 .btn:hover {
-  -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
   background: var(--shadowColor);
   border: 2px solid var(--primaryColor);
@@ -155,20 +133,15 @@ img {
 }
 
 .secTitle {
-  display: -ms-grid;
   display: grid;
   text-align: center;
   padding: 1rem 0;
   font-size: var(--h3FontSize);
   font-weight: 700;
   color: var(--primaryColorDark);
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 100%;
 }
-
 .secTitle h3 {
   font-size: var(--h1FontSize);
 }
@@ -196,5 +169,4 @@ img {
   width: 10px;
   background: var(--primaryColor);
   border-radius: var(--borderRadius);
-}
-/*# sourceMappingURL=App.css.map */
+}/*# sourceMappingURL=App.css.map */

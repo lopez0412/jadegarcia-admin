@@ -10,6 +10,9 @@ import { BiSearchAlt } from "react-icons/bi";
 import { GoBell } from "react-icons/go";
 
 const HelloSectionListing = ({ selectedMenu, setSelectedMenu }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const toggleDropdown = () => setDropdownOpen(!dropdownOpen);
+  
   return (
     <div className="HelloSection">
     <div className="navBar flex">
@@ -21,7 +24,7 @@ const HelloSectionListing = ({ selectedMenu, setSelectedMenu }) => {
         {/* Menu */}
         <div className="menu flex">
           {/*<li className="menuList ">
-            <a href="/">Dashboard</a>
+            <a href="/dashboard">Dashboard</a>
           </li>*/}
           <li className="menuList active">
             <a href="/listing">Mantenimientos</a>
@@ -33,7 +36,17 @@ const HelloSectionListing = ({ selectedMenu, setSelectedMenu }) => {
       </div>
       {/* Admin Section */}
       <div className="account flex">
-        <img src={Logo2} alt="Admin Image" />
+       
+        
+        <img src={Logo2} alt="Admin Image" onClick={toggleDropdown} />
+        {dropdownOpen && (
+        <div className="dropdown">
+        <div className="dropdown-content">
+          <a href="/" onClick={() => localStorage.removeItem('token')}>Cerrar Sesión</a>
+        </div>
+      </div>
+        )}
+        
       </div>
     </div>
     <div className="InHello">

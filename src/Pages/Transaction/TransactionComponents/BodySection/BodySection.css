@@ -2,9 +2,7 @@
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-transition: 0.3s ease;
+  box-sizing: border-box;
   transition: 0.3s ease;
   font-family: "Urbanist", sans-serif;
 }
@@ -40,85 +38,61 @@
   gap: 2rem;
   padding: 0rem 4.5rem;
   z-index: 100;
-  -webkit-transform: translateY(-9rem);
-          transform: translateY(-9rem);
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  transform: translateY(-9rem);
+  justify-content: flex-start;
+  align-items: flex-start;
 }
-
 .BodySection .LeftDiv {
-  -ms-flex-preferred-size: 30%;
-      flex-basis: 30%;
+  flex-basis: 30%;
   gap: 1.5rem;
 }
-
 .BodySection .LeftDiv .balance {
   background: var(--whiteColor);
   padding: 1.5rem;
   border-radius: 15px;
 }
-
 .BodySection .LeftDiv .balance .topFlex {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .LeftDiv .balance .topFlex small {
   font-family: "Kanit", sans-serif;
   font-size: var(--h2FontSize);
   font-weight: 400;
   color: var(--blackColorLight);
 }
-
 .BodySection .LeftDiv .balance .topFlex .rightFlex {
   gap: 0.5rem;
 }
-
 .BodySection .LeftDiv .balance .topFlex .rightFlex img {
   height: 30px;
   width: 30px;
 }
-
 .BodySection .LeftDiv .balance .topFlex .rightFlex .cardNumber {
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .LeftDiv .balance h1 {
   font-family: "Kanit", sans-serif;
   color: var(--blackColor);
   font-size: var(--biggestFontSize);
   padding-bottom: 1.5rem;
 }
-
 .BodySection .LeftDiv .balance .buttons {
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   gap: 1rem;
 }
-
 .BodySection .LeftDiv .balance .buttons .btn {
   width: 100%;
   border-radius: 10px;
   font-size: var(--h2FontSize);
   gap: 0.5rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 .BodySection .LeftDiv .savings {
   background: var(--whiteColor);
   padding: 1.5rem;
   border-radius: 15px;
 }
-
 .BodySection .LeftDiv .savings .cardTitle {
   display: block;
   font-family: "Kanit", sans-serif;
@@ -127,11 +101,9 @@
   color: var(--blackColorLight);
   margin-bottom: 1rem;
 }
-
 .BodySection .LeftDiv .savings .items {
   gap: 1rem;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem {
   overflow: hidden;
   position: relative;
@@ -139,58 +111,41 @@
   border-radius: var(--borderRadius);
   border: 2px solid var(--cardColor);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop {
   width: 100%;
   gap: 1rem;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-start;
+  justify-content: space-between;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop img {
   width: 45px;
   background: var(--cardColor);
   border-radius: 5px;
   padding: 8px;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop .text {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop .text h4 {
   font-size: var(--h2FontSize);
   color: var(--blackColor);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop .text small {
   color: var(--blackColorLight);
   font-size: var(--normalFontSize);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop .icon {
   color: var(--blackColorLight);
   font-size: 25px;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .cardTop .icon:hover {
   color: var(--blackColor);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress {
   margin-top: 1rem;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress .color {
   display: block;
   height: 10px;
@@ -198,7 +153,6 @@
   margin-top: 0.5rem;
   border-radius: 3rem;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress .completed {
   width: 40%;
   color: var(--blackColor);
@@ -206,11 +160,9 @@
   font-weight: 700;
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress .completed .color {
   background: var(--primaryColor);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress .unCompleted {
   width: 58%;
   color: var(--blackColorLight);
@@ -219,43 +171,32 @@
   font-family: "Kanit", sans-serif;
   text-align: right;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .progress .unCompleted .color {
   background: var(--primaryColorLight);
   opacity: 1;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(2) .completed {
   width: 50%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(2) .unCompleted {
   width: 48%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(3) .completed {
   width: 80%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(3) .unCompleted {
   width: 18%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(4) .completed {
   width: 20%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem:nth-child(4) .unCompleted {
   width: 78%;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .actions {
-  display: -ms-grid;
   display: grid;
-  -webkit-transition: all .4s ease-in-out;
-  transition: all .4s ease-in-out;
-  -webkit-transform: translateX(150%);
-          transform: translateX(150%);
+  transition: all 0.4s ease-in-out;
+  transform: translateX(150%);
   position: absolute;
   top: 0;
   right: 0;
@@ -268,7 +209,6 @@
   gap: 0.25rem;
   border-radius: 5px;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .actions .flex {
   padding: 0.25rem;
   width: 100%;
@@ -277,22 +217,16 @@
   color: var(--whiteColor);
   gap: 0.5rem;
   margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   cursor: pointer;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .actions .flex:hover {
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   background: #7d98b7;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .actions .delete {
   background: red;
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .actions .closeIcon {
   position: absolute;
   left: -18px;
@@ -303,47 +237,35 @@
   padding: 5px;
   color: var(--whiteColor);
 }
-
 .BodySection .LeftDiv .savings .items .singleItem .showActions {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+  transform: translateX(0%);
 }
-
 .BodySection .RightDiv {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  flex-basis: 70%;
   gap: 1.5rem;
 }
-
 .BodySection .RightDiv .firstCard {
   border-radius: 15px;
   padding: 1.5rem;
   background: var(--whiteColor);
 }
-
 .BodySection .RightDiv .firstCard .income,
 .BodySection .RightDiv .firstCard .expenses {
-  -ms-flex-preferred-size: 40%;
-      flex-basis: 40%;
+  flex-basis: 40%;
   padding: 1rem;
   border-right: 2px solid var(--shadowColor);
   padding-right: 2rem;
 }
-
 .BodySection .RightDiv .firstCard .income .cardTitle,
 .BodySection .RightDiv .firstCard .expenses .cardTitle {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .firstCard .income .cardTitle span,
 .BodySection .RightDiv .firstCard .expenses .cardTitle span {
   color: var(--blackColorLight);
   font-size: var(--h2FontSize);
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .firstCard .income .cardTitle .icon,
 .BodySection .RightDiv .firstCard .expenses .cardTitle .icon {
   font-size: 40px;
@@ -352,7 +274,6 @@
   padding: 8px;
   color: var(--primaryColor);
 }
-
 .BodySection .RightDiv .firstCard .income h1,
 .BodySection .RightDiv .firstCard .expenses h1 {
   font-size: var(--biggestFontSize);
@@ -360,48 +281,36 @@
   padding: 1rem 0;
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .firstCard .income .rate,
 .BodySection .RightDiv .firstCard .expenses .rate {
   font-size: var(--h3FontSize);
   gap: 0.4em;
   color: var(--blackColorLight);
 }
-
 .BodySection .RightDiv .firstCard .income .rate .icon,
 .BodySection .RightDiv .firstCard .income .rate blockquote,
 .BodySection .RightDiv .firstCard .expenses .rate .icon,
 .BodySection .RightDiv .firstCard .expenses .rate blockquote {
-  color: #0ccd0c;
+  color: rgb(12, 205, 12);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top {
   background: var(--whiteColor);
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  flex-basis: 60%;
   padding: 1rem;
   width: 100%;
   padding-left: 2rem;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle span {
   color: var(--blackColorLight);
   font-size: var(--h2FontSize);
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .cardTitle small {
   padding: 8px 16px;
   border-radius: 5px;
@@ -409,7 +318,6 @@
   color: var(--blackColor);
   font-size: var(--normalFontSize);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .range .amount {
   display: block;
   padding: 1rem 0;
@@ -417,20 +325,15 @@
   color: var(--blackColor);
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .range .amount small {
   font-size: var(--h3FontSize);
   margin-left: 0.5rem;
   color: var(--blackColorLight);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress {
   margin-top: 0.5rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress .completed {
   display: block;
   height: 8px;
@@ -438,7 +341,6 @@
   background: var(--primaryColor);
   border-radius: 3rem;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_top .limit .range .progress .unCompleted {
   display: block;
   height: 8px;
@@ -447,57 +349,41 @@
   border-radius: 3rem;
   opacity: 1;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom {
   background: var(--whiteColor);
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .expenses {
-  -webkit-box-flex: 40%;
-      -ms-flex: 40%;
-          flex: 40%;
+  flex: 40%;
   border-top: 2px solid var(--shadowColor);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .expenses .icon {
-  color: #db5959;
+  color: rgb(219, 89, 89);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate {
   font-size: var(--h3FontSize);
   gap: 0.4em;
   color: var(--blackColorLight);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate .icon,
 .BodySection .RightDiv .firstCard .firstCard_bottom .expenses .rate blockquote {
-  color: red;
+  color: rgb(255, 0, 0);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics {
-  -ms-flex-preferred-size: 60%;
-      flex-basis: 60%;
+  flex-basis: 60%;
   border-top: 2px solid var(--shadowColor);
   padding: 1rem;
   width: 100%;
   padding-left: 2rem;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle span {
   color: var(--blackColorLight);
   font-size: var(--h2FontSize);
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .cardTitle small {
   padding: 8px 16px;
   border-radius: 5px;
@@ -505,98 +391,74 @@
   color: var(--blackColor);
   font-size: var(--normalFontSize);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges {
   width: 100%;
   gap: 0.5rem;
   margin-top: 2rem;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .color {
   height: 8px;
   display: block;
   border-radius: 3rem;
   margin-bottom: 0.5rem;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .text {
   padding-top: 0.5rem;
   color: var(--blackColorLight);
   font-size: var(--normalFontSize);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .icon {
   font-size: var(--h1FontSize);
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .amount {
   font-size: var(--h3FontSize);
   color: var(--blackColor);
   font-family: "Kanit", sans-serif;
   font-weight: 700;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment {
   width: 40%;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment .color {
   background: #ffafca;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Refurbrishment .icon {
   color: #ffafca;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture {
   width: 40%;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture .color {
   background: #9583ce;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Furniture .icon {
   color: #9583ce;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others {
   width: 20%;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others .color {
   background: #a5acfe;
 }
-
 .BodySection .RightDiv .firstCard .firstCard_bottom .analytics .ranges .Others .icon {
   color: #a5acfe;
 }
-
 .BodySection .RightDiv .secondCard {
   background: var(--whiteColor);
   padding: 2rem;
   border-radius: var(--borderRadius);
 }
-
 .BodySection .RightDiv .secondCard .cardTitle {
   padding-bottom: 1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .secondCard .cardTitle span {
   font-size: var(--h2FontSize);
   color: var(--blackColor);
   font-weight: 700;
 }
-
 .BodySection .RightDiv .secondCard .cardTitle small {
   padding: 8px 16px;
   border-radius: 5px;
@@ -604,102 +466,81 @@
   color: var(--blackColor);
   font-size: var(--normalFontSize);
 }
-
 .BodySection .RightDiv .secondCard .secContainer {
   min-height: 500px;
   gap: 1.5rem;
   width: 100%;
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem 0;
   border-bottom: 2px solid var(--shadowColor);
   gap: 1.5rem;
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .text {
   color: var(--blackColor);
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv img {
   width: 45px;
   background: var(--cardColor);
   border-radius: 5px;
   padding: 8px;
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv .text {
   font-size: var(--h2FontSize);
   color: var(--blackColor);
   margin-left: 1rem;
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .nameDiv .text small {
   display: block;
   padding-top: 0.1rem;
   color: var(--blackColorLight);
   font-size: var(--smallFontSize);
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .dateDiv small {
   display: block;
   padding-top: 0.1rem;
   color: var(--blackColorLight);
   font-size: var(--smallFontSize);
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .status {
   background: #e7f5f0;
   border-radius: 5px;
   padding: 8px 16px;
 }
-
 .BodySection .RightDiv .secondCard .secContainer .singleItem .status .text {
-  color: #25b625;
+  color: rgb(37, 182, 37);
 }
-
 .BodySection .RightDiv .listingContainer {
   padding: 1.5rem;
   border-radius: var(--borderRadius);
   background: var(--whiteColor);
 }
-
 .BodySection .RightDiv .listingContainer .cardTitle {
   display: block;
   font-size: var(--h1FontSize);
   color: var(--blackColorLight);
   font-weight: 700;
 }
-
 .BodySection .RightDiv .listingContainer .searchField {
   margin: 2rem 0;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 1rem 1.5rem;
   border-radius: var(--borderRadius);
   border: 5px solid var(--cardColor);
-  -webkit-box-shadow: 0 4px 8px var(--primaryColorLight);
-          box-shadow: 0 4px 8px var(--primaryColorLight);
+  box-shadow: 0 4px 8px var(--primaryColorLight);
 }
-
 .BodySection .RightDiv .listingContainer .searchField .select {
-  display: -ms-grid;
   display: grid;
   gap: 0.5rem;
   width: 100%;
 }
-
 .BodySection .RightDiv .listingContainer .searchField .select small {
   color: var(--primaryColorDark);
   opacity: 0.7;
   font-size: var(--smallestFontSize);
   font-weight: 200;
 }
-
 .BodySection .RightDiv .listingContainer .searchField .select select {
   border: none;
   width: 70%;
@@ -709,73 +550,55 @@
   outline: none;
   color: var(--primaryColorDark);
 }
-
 .BodySection .RightDiv .listingContainer .searchField .btn {
   padding: 10px 30px;
   font-size: var(--h2FontSize);
   gap: 0.5rem;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer {
   min-height: 500px;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty {
   padding: 1rem;
   border-radius: var(--borderRadius);
   background: var(--shadowColor);
   border: 2px dashed transparent;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty:hover {
-  -webkit-box-shadow: 0 4px 8px var(--primaryColorLight);
-          box-shadow: 0 4px 8px var(--primaryColorLight);
+  box-shadow: 0 4px 8px var(--primaryColorLight);
   border: 2px dashed var(--primaryColorDark);
-  -webkit-transition: 0.4s ease-in-out;
   transition: 0.4s ease-in-out;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text h4 {
   font-size: var(--h1FontSize);
   color: var(--primaryColorDark);
   padding-bottom: 0.5rem;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text span {
   color: var(--blackColorLight);
   font-size: var(--h2FontSize);
   display: block;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .text small {
   display: block;
   font-size: var(--normalFontSize);
   color: var(--blackColorLight);
   padding: 0.5rem 0;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .infor .icon {
   font-size: var(--h1FontSize);
-  color: #e2809f;
+  color: rgb(226, 128, 159);
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature {
   margin: 0.5rem 0;
   position: relative;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature .title {
   display: block;
   color: var(--blackColor);
@@ -783,57 +606,44 @@
   position: relative;
   padding-bottom: 0.5rem;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature h4 {
   font-size: var(--h1FontSize);
   font-family: "Kanit", sans-serif;
   color: var(--primaryColorDark);
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .temperature h4 .icon {
-  color: #ffc800;
+  color: rgb(255, 200, 0);
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv {
   height: 180px;
   width: 100%;
   border-radius: var(--borderRadius);
   overflow: hidden;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv:hover img {
   scale: 1.1;
-  -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .imgDiv img {
   height: 100%;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .price {
   padding-top: 1rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .price span {
   font: var(--h3FontSize);
   color: var(--blackColorLight);
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .price span h4 {
   color: var(--primaryColorDark);
   font-size: var(--h1FontSize);
   font-family: "Kanit", sans-serif;
 }
-
 .BodySection .RightDiv .listingContainer .secContainer .singleProperty .price .btn {
   padding: 12px 25px;
   font-size: var(--h3FontSize);
-}
-/*# sourceMappingURL=BodySection.css.map */
+}/*# sourceMappingURL=BodySection.css.map */

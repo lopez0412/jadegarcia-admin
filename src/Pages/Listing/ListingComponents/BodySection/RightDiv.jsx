@@ -81,7 +81,7 @@ const handleChangeNew = (e) => {
 
 //metodo que regresa al login si aun no te has logueado.
 function navegarLogin(){
-  navigate('/login')
+  navigate('/')
 }
 
 //MARK: - Metodo para traer la lista de los trips..

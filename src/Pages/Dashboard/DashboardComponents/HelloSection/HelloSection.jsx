@@ -21,7 +21,7 @@ const HelloSection = () => {
           {/* Menu */}
           <div className="menu flex">
             <li className="menuList active">
-              <a href="/">Dashboard</a>
+              <a href="/dashboard">Dashboard</a>
             </li>
             <li className="menuList">
               <a href="/listing">Mantenimientos</a>

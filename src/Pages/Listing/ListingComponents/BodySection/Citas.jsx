@@ -62,6 +62,7 @@ function Citas() {
         setDecoded(jwtDecode(token));
         getAppoinments()
         filtrarservicio()
+        filtraUser()
     }else{
         navegarLogin();
     }
@@ -69,12 +70,12 @@ function Citas() {
 
 //metodo que regresa al login si aun no te as logueado.
 function navegarLogin(){
-  navigate('/login')
+  navigate('/')
 }
 
 //MARK: - Metodo para traer la lista de los trips..
 const getAppoinments = async () => {
-  await axios.get(baseUrl+'/getAllCitas', {
+  await axios.get(baseUrl+'/getAllCitasMonth', {
       headers: {
           'Content-Type': 'application/json',
           'auth-token': token
@@ -205,8 +206,8 @@ const getAppoinments = async () => {
         });
   }
 
-  const filtraUser = (text) => {
-    axios.get(baseUrl + '/search', { params: { nombre: text} })
+  const filtraUser = () => {
+    axios.get(baseUrl + '/search', { params: { nombre: ""} })
         .then((response) => {
           procesaUsuario(response.data)
         })
@@ -540,7 +541,7 @@ const getAppoinments = async () => {
                   </div>
 
                   <div> 
-                    <Select options={userSuggestions} onInputChange={(e) => filtraUser(e)} onChange={handleChangeUser}/>
+                    <Select options={userSuggestions}  onChange={handleChangeUser}/>
                   </div>
                   <div className='product-available'>
                             {horarios.map((hora, index) => (

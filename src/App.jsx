@@ -14,17 +14,17 @@ import ListingAdmin from "./Pages/Listing/ListingComponents/ListingAdmin";
 
 // lets create a router
 const router = createBrowserRouter([
-  /**{
-    path: "/",
+  {
+    path: "/dashboard",
     element: (
       <div className="body">
         <HelloSection />
         <BodySection />
       </div>
     ),
-  },*/
+  },
   {
-    path: "/login",
+    path: "/",
     element: (
       <div className="body">
         <Login />

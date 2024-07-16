@@ -48,7 +48,7 @@ function ListingActions({ cita,removeDetalles, getApp }) {
 
 //metodo que regresa al login si aun no te as logueado.
 function navegarLogin(){
-    location.href = '/login'
+    location.href = '/'
 }
 
 
